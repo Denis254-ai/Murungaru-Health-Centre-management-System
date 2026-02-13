@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, Bot, User, Loader2, X } from 'lucide-react';
+import { Send, Bot, Loader2, X } from 'lucide-react';
+
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // Initialize Gemini API (Note: In production, this should be done via a backend route to hide the key)
@@ -133,8 +134,8 @@ export function DaktariChat() {
                     >
                         <div
                             className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user'
-                                    ? 'bg-primary text-white rounded-br-none'
-                                    : 'bg-white text-slate-800 border border-slate-200 rounded-bl-none shadow-sm'
+                                ? 'bg-primary text-white rounded-br-none'
+                                : 'bg-white text-slate-800 border border-slate-200 rounded-bl-none shadow-sm'
                                 }`}
                         >
                             {msg.text}
