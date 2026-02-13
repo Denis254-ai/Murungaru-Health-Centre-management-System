@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// FIXED: Switched to 'Cog' because 'Settings' can cause version conflicts
+// FIX: Using 'Cog' instead of 'Settings' to resolve Vercel build errors
 import { Home, Users, ClipboardList, Package, Cog, LogOut } from 'lucide-react';
 import { clsx } from 'clsx';
 
@@ -11,7 +11,7 @@ const navItems = [
     { name: 'Triage Queue', href: '/staff/triage', icon: ClipboardList },
     { name: 'Patients', href: '/staff/patients', icon: Users },
     { name: 'Inventory', href: '/admin/inventory', icon: Package },
-    // FIXED: Using Cog icon here
+    // FIX: mapped to Cog icon
     { name: 'Settings', href: '/settings', icon: Cog },
 ];
 
