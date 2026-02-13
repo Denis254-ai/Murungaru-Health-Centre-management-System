@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Users, ClipboardList, Package, Settings, LogOut } from 'lucide-react';
+import { Home, Users, ClipboardList, Package, Settings2 as Settings, LogOut } from 'lucide-react';
 import { clsx } from 'clsx';
 
 const navItems = [
