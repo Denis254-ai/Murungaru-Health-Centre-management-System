@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-poppins);
+
+  --color-primary: #122056;
+  --color-primary-foreground: #FFFFFF;
+
+  --color-accent: #5B65DC;
+  --color-accent-foreground: #FFFFFF;
+
+  --color-success: #10B981;
+  --color-success-foreground: #FFFFFF;
+
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #64748B;
+
+  --color-background: #F8FAFC;
+  --color-foreground: #1E293B;
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #1E293B;
+
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1E293B;
+
+  --color-secondary: #F1F5F9;
+  --color-secondary-foreground: #122056;
+
+  --color-border: #E2E8F0;
+  --color-input: #E2E8F0;
+  --color-ring: #122056;
+
+  --radius: 0.5rem;
+}
+
+/* Utility to match shadcn-like usage if needed, but v4 maps these automatically */
+:root {
+  --radius: 0.5rem;
+}
