@@ -1,43 +1,115 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-poppins);
 
-  --color-primary: #122056;
-  --color-primary-foreground: #FFFFFF;
+  /* Brand Colors from User Reference */
+  --color-brand-dark: #122056;
+  /* Deep Blue header/text */
+  --color-brand-accent: #5B65DC;
+  /* Bright Blue buttons/links */
+  --color-brand-light: #EEEFFD;
+  /* Light sidebar/bg */
+  --color-brand-white: #FFFFFF;
+  /* Pure white surface */
 
-  --color-accent: #5B65DC;
-  --color-accent-foreground: #FFFFFF;
+  /* Dark Mode Mapping */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
-  --color-success: #10B981;
-  --color-success-foreground: #FFFFFF;
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
 
-  --color-destructive: #EF4444;
-  --color-destructive-foreground: #FFFFFF;
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
 
-  --color-muted: #F1F5F9;
-  --color-muted-foreground: #64748B;
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 
-  --color-background: #F8FAFC;
-  --color-foreground: #1E293B;
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
-  --color-card: #FFFFFF;
-  --color-card-foreground: #1E293B;
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
 
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #1E293B;
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-  --color-secondary: #F1F5F9;
-  --color-secondary-foreground: #122056;
-
-  --color-border: #E2E8F0;
-  --color-input: #E2E8F0;
-  --color-ring: #122056;
-
-  --radius: 0.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
-/* Utility to match shadcn-like usage if needed, but v4 maps these automatically */
+/* Base Light Mode */
 :root {
-  --radius: 0.5rem;
+  --background: #EEEFFD;
+  /* Soft Blue-White */
+  --foreground: #122056;
+  /* Deep Blue Text */
+
+  --primary: #122056;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #FFFFFF;
+  --secondary-foreground: #122056;
+
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+
+  --accent: #5B65DC;
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #D1D5DB;
+  --input: #D1D5DB;
+  --ring: #5B65DC;
+
+  --radius: 0.75rem;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --background: #0F172A;
+  /* Slate 900 */
+  --foreground: #F8FAFC;
+  /* Slate 50 */
+
+  --primary: #5B65DC;
+  /* Accent becomes Primary in Dark to pop */
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #1E293B;
+  /* Slate 800 */
+  --secondary-foreground: #F8FAFC;
+
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+
+  --accent: #122056;
+  /* Deep Blue becomes Accent */
+  --accent-foreground: #FFFFFF;
+
+  --destructive: #7F1D1D;
+  --destructive-foreground: #FECACA;
+
+  --border: #334155;
+  --input: #334155;
+  --ring: #5B65DC;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
