@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Users, ClipboardList, Package, Settings2 as Settings, LogOut } from 'lucide-react';
+// FIXED: Switched to 'Cog' because 'Settings' can cause version conflicts
+import { Home, Users, ClipboardList, Package, Cog, LogOut } from 'lucide-react';
 import { clsx } from 'clsx';
 
 const navItems = [
@@ -10,7 +11,8 @@ const navItems = [
     { name: 'Triage Queue', href: '/staff/triage', icon: ClipboardList },
     { name: 'Patients', href: '/staff/patients', icon: Users },
     { name: 'Inventory', href: '/admin/inventory', icon: Package },
-    { name: 'Settings', href: '/settings', icon: Settings },
+    // FIXED: Using Cog icon here
+    { name: 'Settings', href: '/settings', icon: Cog },
 ];
 
 export function Sidebar() {
