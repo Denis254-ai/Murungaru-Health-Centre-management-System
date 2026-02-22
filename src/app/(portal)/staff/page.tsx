@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Users, FileText, Clipboard, Plus, Trash2, CheckCircle, Search, Pill } from "lucide-react";
-import { clsx } from "clsx";
+import { Users, FileText, Clipboard, Plus, Trash2, Pill } from "lucide-react";
 
 // Mock Data
 const PATIENTS = [

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Package, Plus, Search, Filter, AlertTriangle } from "lucide-react";
 
 const INVENTORY = [

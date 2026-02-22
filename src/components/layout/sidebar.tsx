@@ -12,8 +12,6 @@ import {
     Calendar,
     MessageSquare,
     History,
-    Activity,
-    Shield,
     LayoutDashboard
 } from "lucide-react";
 import { clsx } from "clsx";
@@ -24,7 +22,6 @@ export function Sidebar() {
     // Determine Role based on Path
     const isPatient = pathname.startsWith("/patient");
     const isAdmin = pathname.startsWith("/admin");
-    const isStaff = pathname.startsWith("/staff");
 
     let navItems = [];
     let portalName = "Murungaru HMS";

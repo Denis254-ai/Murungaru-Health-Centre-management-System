@@ -1,7 +1,6 @@
 "use client";
 
-import { User, Bell, Shield, Moon, Sun, Smartphone } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { User, Bell, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { clsx } from "clsx";
 
