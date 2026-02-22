@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Activity, Package, DollarSign, UserPlus, Trash2, MoreHorizontal } from "lucide-react";
+import { Users, Activity, Package, DollarSign, UserPlus, MoreHorizontal } from "lucide-react";
 import Link from "next/link";
 
 const STATS = [
